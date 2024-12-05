@@ -2,6 +2,12 @@ import React from 'react';
 import Webcam from 'react-webcam';
 
 const Camera = ({ webcamRef, onCapture, onCancel }) => {
+  const videoConstraints = {
+    facingMode: "user",
+    width: { ideal: 640 }, // Reduce resolution for better performance
+    height: { ideal: 480 },
+  };
+
   return (
     <div className="camera-container">
       <Webcam
@@ -9,6 +15,7 @@ const Camera = ({ webcamRef, onCapture, onCancel }) => {
         screenshotFormat="image/jpeg"
         className="w-full rounded-xl"
         mirrored={true}
+        videoConstraints={videoConstraints}
       />
       <div className="camera-overlay"></div>
       <div className="mt-4 flex gap-3">
