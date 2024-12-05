@@ -142,7 +142,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0f172a] text-[#f8fafc]">
+    <div className="min-h-screen bg-[#0f172a] text-[#f8fafc] pb-20 md:pb-0">
       <Navbar onHowItWorks={() => setShowHowItWorks(true)} />
       
       {showHowItWorks && <HowItWorks onClose={() => setShowHowItWorks(false)} />}
@@ -244,7 +244,7 @@ function App() {
         )}
       </main>
 
-      <footer className="py-12 border-t border-[#334155] bg-[#1e293b]">
+      <footer className="py-12 border-t border-[#334155] bg-[#1e293b] mt-8 md:mt-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-4 text-center">
             <h3 className="text-2xl font-bold text-[#38bdf8] font-display">Privacy First</h3>
